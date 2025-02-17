@@ -2,5 +2,5 @@ streamlit
 PyPDF2
 google-generativeai
 pdfplumber
-openai
+openai==1.51.2
 time
