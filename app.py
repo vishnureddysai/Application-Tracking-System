@@ -5,6 +5,7 @@ import pdfplumber
 import time
 import google.generativeai as genai
 from openai import AzureOpenAI
+import streamlit.components.v1 as components
 
 genai.configure(api_key="AIzaSyCsfmhNSqygZjwDt01-K3ZjKaSAmNKRWmE")
 gmodel = genai.GenerativeModel("gemini-2.0-flash")
@@ -25,6 +26,15 @@ st.title("Application Tracking System")
 st.write("AI based model to check your ATS score.")
 
 st.info("Your All in One Resume Tool based on LLM's")
+
+adsense_code = """
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3268803798026176"
+     crossorigin="anonymous"></script>
+
+"""
+components.html(adsense_code)
+
 
 if "model" not in st.session_state:
     st.session_state.model = "GEMINI"
